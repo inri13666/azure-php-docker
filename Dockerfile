@@ -74,7 +74,6 @@ RUN set -ex\
 COPY .build/hostingstart.html /var/www
 
 # Configure PHP CLI
-COPY .build/php.ini /etc/php/7.1/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/cli/php.ini
 
 # Configure PHP FPM
